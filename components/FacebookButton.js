@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
 
-const FacebookButton = ({ action }) => (
+const FacebookButton = ({ action, text }) => (
   <TouchableOpacity style={styles.button} onPress={action}>
-    <Text style={styles.text}>Login with Facebook</Text>
+    <Text style={styles.text}>{text}</Text>
   </TouchableOpacity>
 );
 
@@ -20,12 +20,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#3f51b5',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginBottom: 16
   },
   text: {
     marginLeft: 12.5,
     width: 208,
-    height: 19,
+    height: 30,
     fontSize: 16,
     fontWeight: '500',
     letterSpacing: 0.44,

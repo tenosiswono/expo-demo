@@ -12,7 +12,7 @@ export default async function login() {
   if (type === 'success') {
     let param = {
       access_token: token,
-      fields: 'id,name,email'
+      fields: 'id,name,email,picture'
     };
     let url = 'https://graph.facebook.com/me?' + qs.stringify(param);
 
